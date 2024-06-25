@@ -1,0 +1,27 @@
+PODS:
+  - PageState (0.2.0)
+  - SnapKit (5.7.1)
+  - TableViewSections (0.1.0)
+
+DEPENDENCIES:
+  - PageState (~> 0.2.0)
+  - SnapKit (~> 5.7.0)
+  - TableViewSections (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - PageState
+    - SnapKit
+
+EXTERNAL SOURCES:
+  TableViewSections:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PageState: 45544d8406eb48c7f9b5ce4d5e149732101b7e14
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  TableViewSections: a5d43990ace7821eb613e99b0e0eb9f4f1a63bd2
+
+PODFILE CHECKSUM: ff0b27a2cb57c94464f29c62add79a990ed0999b
+
+COCOAPODS: 1.13.0

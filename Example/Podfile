@@ -1,9 +1,12 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '12.0'
 
 target 'TableViewSections_Example' do
   pod 'TableViewSections', :path => '../'
+  pod 'PageState', '~> 0.2.0'
+#  pod 'PageState', :path => '../../PageState'
+  pod 'SnapKit', '~> 5.7.0'
 
   target 'TableViewSections_Tests' do
     inherit! :search_paths
