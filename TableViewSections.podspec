@@ -21,6 +21,7 @@ Pod::Spec.new do |s|
   s.author           = { 'zhaoshouwen' => 'zsw19911017@163.com' }
   s.source           = { :git => 'https://github.com/git179979506/TableViewSections.git', :tag => s.version.to_s }
   s.social_media_url = 'https://juejin.cn/user/4265760847569166'
+  s.swift_versions = ['4.2', '5.0']
 
   s.ios.deployment_target = '10.0'
 

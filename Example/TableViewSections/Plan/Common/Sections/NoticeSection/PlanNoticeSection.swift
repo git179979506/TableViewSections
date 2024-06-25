@@ -28,6 +28,11 @@ class PlanNoticeSection: PlanTableViewSectionType {
         // 按需加载缓存数据
     }
     
+    // 使用Cell自动注册逻辑，可不用实现这个方法 https://juejin.cn/post/7195005912653856827
+//    static func register(for tableView: UITableView) {
+//        // 注册用到的Cell，外部需要调用这个方法进行注册
+//    }
+    
     // 网络请求
     func loadData(callback: @escaping ErrorTask) {
         PlanAPI.otherApi(params: ["type": type.rawValue]).reqeust { [weak self] in
@@ -43,6 +48,7 @@ class PlanNoticeSection: PlanTableViewSectionType {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Cell 自动注册 https://juejin.cn/post/7195005912653856827
         let cell = tableView.ns.dequeueCell(PlanNoticeCell.self, for: indexPath)
         model.run(cell.update(with:))
         return cell
