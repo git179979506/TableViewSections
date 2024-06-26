@@ -55,4 +55,15 @@ class PlanType1TableVM: EstimatedTableViewModel {
             callBack(err)
         }
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 根据 contentOffset 控制 stretchableView 形变
+        
+        // scaleWidth == false，stretchableView 宽度不变
+        let continer = context.viewController as? PullDownStretchable
+        continer?.stretchFixed(with: scrollView.contentOffset.y + scrollView.adjustedContentInset.top, scaleWidth: false)
+        
+        // scaleWidth == true，默认值，stretchableView 宽度改变
+//        continer?.stretchFixed(with: scrollView.contentOffset.y + scrollView.adjustedContentInset.top)
+    }
 }

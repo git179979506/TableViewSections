@@ -49,4 +49,9 @@ class PlanType2TableVM: EstimatedTableViewModel {
             callback(nil)
         }
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let continer = context.viewController as? PullDownStretchable
+        continer?.stretchFixed(with: scrollView.contentOffset.y + scrollView.adjustedContentInset.top)
+    }
 }
